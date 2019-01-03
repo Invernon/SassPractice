@@ -1,0 +1,122 @@
+// Elementals Elements
+
+@import "sass/lib/variables";
+@import "sass/lib/mixins";
+
+// Base Elements
+
+@import "sass/base/button";
+@import "sass/base/link";
+@import "sass/base/font";
+
+// Base Components
+
+@import "sass/components/grid";
+
+// Utilities
+
+@import "sass/lib/utilities";
+
+// Layout
+
+@import "sass/layout/layout";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $basefont;
+}
+
+.layout{
+    @extend %grid-layout;
+}
+.content{
+    @extend %content;
+    background-color: $color-grey;
+}
+
+.fonts{
+    font-family: $basefont;
+    
+    p{
+        font-family: inherit;
+    }
+}
+
+%palette-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill , 150px);
+    grid-auto-rows: 150px;
+    justify-content: space-between;
+}
+
+%palette-grid-colors{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.palette-colors{
+    &__branding{
+        @extend %palette-grid;
+
+        .color{
+            @extend %palette-grid-colors;
+        }
+    
+        .color:nth-child(1){
+            background-color: $color-primary;
+        }
+        .color:nth-child(2){
+            background-color: $color-primary-light;
+        }
+        .color:nth-child(3){
+            background-color: $color-secondary;
+        }
+        .color:nth-child(4){
+            background-color: $color-secondary-light;
+        }
+    }
+
+    &__greyscale{
+        @extend %palette-grid;
+        .color{
+            @extend %palette-grid-colors;
+        }
+        .color:nth-child(1){
+            background-color: $color-black;
+        }
+        .color:nth-child(2){
+            background-color: $color-darkgrey;
+        }
+        .color:nth-child(3){
+            background-color: $color-grey;
+        }
+        .color:nth-child(4){
+            background-color: $color-lightgrey;
+        }
+        .color:nth-child(5){
+            background-color: $color-white;
+        }
+    }
+    
+    &__textures{
+        @extend %palette-grid;
+        .color{
+            @extend %palette-grid-colors;
+        }
+        .color:nth-child(1){
+            background-color: $color-success;
+        }
+        .color:nth-child(2){
+            background-color: $color-alert;
+        }
+        .color:nth-child(3){
+            background-color: $color-info;
+        }
+        .color:nth-child(4){
+            background-color: $color-error;
+        }
+    }
+}

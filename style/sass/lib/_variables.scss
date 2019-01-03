@@ -1,0 +1,39 @@
+/*------------------------*\ 
+|         $COLORS          |
+\*------------------------*/ 
+
+//      Branding Colors
+
+$color-primary: #0EB25B;
+$color-primary-light: #61FFAB;
+$color-secondary: #FF7061;
+$color-secondary-light: #FFB2A6;
+
+
+//      GrayScale
+
+$color-black: rgb(0,0,0);
+$color-darkgrey: rgb(77, 77, 77);
+$color-grey: rgb(115, 115, 115);
+$color-lightgrey: #bfbfbf;
+$color-white: rgb(255,255,255);
+
+//      Textures
+
+$color-alert: rgb(252,228,207);
+$color-error: rgb(218,79,73);
+$color-info: rgb(66,104,221);
+$color-success: rgb(91,183,91);
+
+//      Constants
+
+$border-radius: 4px;
+$padding: 1pc;
+
+//      Fonts styles
+$basefont: Verdana, Geneva, Tahoma, sans-serif;
+$basefontsize: 16px;
+
+$buttoncolor: $color-white;
+$buttonbackgroundcolor: $color-primary;
+$buttonfontsize: $basefontsize * 1.5;
